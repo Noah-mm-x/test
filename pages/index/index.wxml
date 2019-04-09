@@ -1,0 +1,35 @@
+<!-- index.wxml -->
+<!-- <canvas class="share-canvas" style="width: 340px; height: 493px;position: absolute; top: -9999rpx;" canvas-id="shareCanvas"></canvas> -->
+<canvas class="share-canvas" style="width: 100px; height: 100px;" canvas-id="shareCanvas"></canvas>
+<view class="container">
+    <view hidden="{{false}}">{{name}}</view>
+    <view>{{fnc.doubleFormatNum(num)}}</view>
+    <view>{{fnc.result}}</view>
+    <save bindhandleDeal="handleSave"></save>
+    <demo self-class="demo-index">
+        <view slot="red">red</view>
+        <view slot="green">green</view>
+    </demo>
+    <!-- <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view> -->
+</view>
+<wxs module="fnc">
+    var num = 0;
+    var doubleFormatNum = function(r){
+        return r >= 10 ? r : '0'+r
+    }   
+    module.exports = {
+        result: num,
+        doubleFormatNum: doubleFormatNum
+    }
+</wxs>

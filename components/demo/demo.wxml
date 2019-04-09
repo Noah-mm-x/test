@@ -1,0 +1,8 @@
+<view id="demo" class="self-class">
+    <view class='red'>
+        <slot name="red"></slot>
+    </view>
+    <view class='green'>
+        <slot name="green"></slot>
+    </view>
+</view>

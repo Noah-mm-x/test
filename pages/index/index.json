@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "save": "/components/save/save",
+      "demo": "/components/demo/demo"
+  }
+}

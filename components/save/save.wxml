@@ -1,0 +1,11 @@
+<view id='save'>
+    <block wx:if="{{authInfo == 'notAtuh'}}">
+        <button bindtap="_handleAuth">来授权吧</button>
+    </block>  
+    <block wx:if="{{authInfo == 'authAndAccept'}}">
+        <button bindtap="handleDeal">授权过了</button>
+    </block>  
+    <block wx:if="{{authInfo == 'authButReject'}}">
+        <button open-type="openSetting" bindopensetting="openSettingCallback">拒绝过了</button>
+    </block>
+</view>
